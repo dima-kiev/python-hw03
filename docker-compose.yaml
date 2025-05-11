@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  app:
+    build: ../../Users/dimak/Downloads/Тема 3. Домашня робота/goit-pythonweb-hw-03-main
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./storage:/app/storage

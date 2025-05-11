@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stored Messages</title>
+  </head>
+  <body>
+    <h1>Saved Messages</h1>
+    {% if messages %}
+    <ul>
+      {% for timestamp, message in messages.items() %}
+      <li>
+        <strong>{{ timestamp }}</strong>: {{ message['username'] }} - {{
+        message['message'] }}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>No messages found.</p>
+    {% endif %}
+  </body>
+</html>
